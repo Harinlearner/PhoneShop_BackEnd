@@ -7,8 +7,8 @@ const app = express();
 app.use(express.json()); //middleware
 app.use(cors());
 dotenv.config();
-const PORT=7000;
-const URL="mongodb+srv://harinmurugesan:o992b1g4xsoXXCte@cluster0.99s4l.mongodb.net/Ecommerce";
+const PORT=process.env.PORT;
+const URL=process.env.URL;
 mongoose
     .connect(URL)
     .then(()=>{
